@@ -30,10 +30,21 @@ The project uses the **Mall Customers** dataset consisting of:
 3. Selected Annual Income and Spending Score as the input features.
 4. Trained the K-Means clustering model.
 5. Assigned each customer to a cluster.
-6. Visualized the customer segments using a scatter plot.
+6. Evaluated the clustering performance using standard clustering metrics.
+7. Visualized the customer segments using a scatter plot.
 
 ## Machine Learning Model
 - K-Means Clustering
+
+## Evaluation Metrics
+
+| Metric | Value |
+|---------|------:|
+| Silhouette Score | **0.554** |
+| Calinski-Harabasz Score | **247.359** |
+| Davies-Bouldin Score | **0.573** |
+
+These metrics indicate that the model forms well-separated and compact customer clusters, making it effective for customer segmentation.
 
 ## Output
 The model groups customers into **5 different clusters** based on their purchasing behavior. A scatter plot is generated to visualize the customer segments along with their cluster centroids.
@@ -55,7 +66,7 @@ pip install pandas matplotlib scikit-learn
 ## How to Run
 1. Upload `Mall_Customers.csv` to Google Colab.
 2. Run all the cells in the notebook.
-3. The notebook will generate customer clusters and display the visualization.
+3. The notebook will generate customer clusters, display the visualization, and print the evaluation metrics.
 
 ## Future Improvements
 - Determine the optimal number of clusters using the Elbow Method.
